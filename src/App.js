@@ -62,7 +62,7 @@ function App() {
       <Router>
         <div className="App">
           <h2>
-            <span>Shopping Cart App</span>
+            <span>Shopping Cart</span>
           </h2>
           <Routes>
             <Route
