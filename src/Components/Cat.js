@@ -1,4 +1,4 @@
-// Cart.js
+
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { BooksContext } from "../App";
@@ -23,7 +23,7 @@ const Cart = () => {
         <span>My Cart({totalCartCount})</span>
       </h2>
 
-      <h3>Total Cart Amount: &#8378;{totalCartAmount}</h3>
+      <h3>Total Cart Amount: ${totalCartAmount}</h3>
 
       {context.state.cart.map((book) => (
         <div key={book.id} className="card mb-4" style={{ width: "18rem" }}>
@@ -31,14 +31,14 @@ const Cart = () => {
             src={book.thumbnail}
             alt={book.title}
             className="card-img-top"
-            style={{ width: "100%", height: "200px", objectFit: "cover" }}
+            style={{ width: "100%", height: "200px" }}
           />
           <div className="card-body">
             <h5 className="card-title">{book.title}</h5>
             <p className="card-text">Author: {book.brand}</p>
-            <p className="card-text">Price: &#8378;{book.price}</p>
+            <p className="card-text">Price: ${book.price}</p>
             <p className="card-text">
-              Total: &#8378;{(book.price * book.count).toFixed(2)}
+              Total: ${(book.price * book.count).toFixed(2)}
             </p>
             <p className="card-text">
               You have a total of {book.count} in your cart.

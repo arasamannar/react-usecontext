@@ -1,4 +1,4 @@
-// Products.js
+
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { BooksContext } from "../App";
@@ -24,12 +24,12 @@ const Products = () => {
                                 src={book.thumbnail}
                                 alt={book.title}
                                 className="card-img-top"
-                                style={{ width: "100%", height: "200px", objectFit: "cover" }}
+                                style={{ width: "100%", height: "200px"}}
                             />
                             <div className="card-body">
                                 <h5 className="card-title">{book.title}</h5>
                                 <p className="card-text">Description: {book.description}</p>
-                                <p className="card-text">Price: &#8378;{book.price}</p>
+                                <p className="card-text">Price: ${book.price}</p>
                                 <button
                                     onClick={() => context.addToCart(book)}
                                     className="btn btn-primary"
